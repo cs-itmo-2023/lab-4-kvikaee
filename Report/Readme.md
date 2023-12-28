@@ -1,0 +1,28 @@
+<img width="805" alt="Снимок экрана 2023-12-28 в 20 41 43" src="https://github.com/cs-itmo-2023/lab-4-kvikaee/assets/144216835/cfb49dc2-fc22-445a-9f13-d80b99af3c71"><img width="656" alt="Снимок экрана 2023-12-28 в 20 30 25" src="https://github.com/cs-itmo-2023/lab-4-kvikaee/assets/144216835/7d16a62a-1dcb-437f-8431-c43b40bb3c65"># Отчет по лабароторной
+
+## Для начала скачиваем докер
+![jwHxb9HPT8Q](https://github.com/cs-itmo-2023/lab-4-kvikaee/assets/144216835/284ab1d5-0bc3-47f6-bbf1-143890d8d873)
+
+
+## Создаем докерфайл
+Сначала я вышла в рут, создала папку mynginx и в ней создала сам файл с названием Dockerfile. Там я прописала все инструкции, которые нужны докеру для создания образа.
+<img width="851" alt="Снимок экрана 2023-12-28 в 20 51 36" src="https://github.com/cs-itmo-2023/lab-4-kvikaee/assets/144216835/63615782-5680-4375-805a-ed3b6f659518">
+
+## Запускаем aafire
+<img width="657" alt="Снимок экрана 2023-12-28 в 20 24 01" src="https://github.com/cs-itmo-2023/lab-4-kvikaee/assets/144216835/76d271cf-1bfd-4970-a6bc-90d04bca8b27">
+
+Скрин работы
+<img width="656" alt="Снимок экрана 2023-12-28 в 20 30 25" src="https://github.com/cs-itmo-2023/lab-4-kvikaee/assets/144216835/c97703ec-bf20-498a-bbb0-f6ddf1423c61">
+
+## Настройка сети между двумя контейнерами
+В другом контейнере открываем еще один aafire.
+Заранее я прописала установку пакета iputils-ping в Dockerfile. С помощью него мы и будем проверять сеть.
+Я открыла еще одно окно терминала и создала сеть myNetwork. А чтобы подключить контейнеры к сети, нам надо узнать их названия. 
+Я проверила это с помощью команды docker ps.
+<img width="748" alt="Снимок экрана 2023-12-28 в 20 38 47" src="https://github.com/cs-itmo-2023/lab-4-kvikaee/assets/144216835/2efbf57f-958b-40b3-af3a-f701cc6076ba">
+
+Затем я подключила контейнеры к сети.
+<img width="805" alt="Снимок экрана 2023-12-28 в 20 41 43" src="https://github.com/cs-itmo-2023/lab-4-kvikaee/assets/144216835/dbc79c8c-02b2-4f13-8d3d-dd8a93640290">
+
+Для проверки соединения можно отправить сетевые пакеты с одного контейнера на ip-адрес второго с помощью ping.
+<img width="657" alt="Снимок экрана 2023-12-28 в 20 49 54" src="https://github.com/cs-itmo-2023/lab-4-kvikaee/assets/144216835/53b238fb-d6f1-4e94-97a4-dedcc45853ef">
